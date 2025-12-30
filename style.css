@@ -164,7 +164,7 @@ footer {
    ESTILOS PÁGINA MENU.HTML
 ===================== */
 body.pagina-menu {
-  background-color: #e7200e;
+  background-color: #860f04;
   color: white;
   padding: 20px;
 }
@@ -198,13 +198,16 @@ body.pagina-menu main p {
 }
 
 body.pagina-menu #imagen-categoria {
-  width: 300px;
-  height: 300px;
+  width: 150px;
+  height: 150px;
   object-fit: cover;
   border-radius: 15px;
-  margin-bottom: 20px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  position: relative;
+  top: -230px;   /* sube la imagen */
+  left: -865px;    /* alinea a la izquierda */
 }
+
 
 body.pagina-menu a.button {
   display: inline-block;
@@ -217,12 +220,12 @@ body.pagina-menu a.button {
 }
 
 body.pagina-menu a.button:hover {
-  background-color: #555;
+  background-color: #dd2b2b;
 }
 
 body.pagina-menu footer {
-  background-color: #222;
-  color: #ccc;
+  background-color: #333;
+  color: #ffffff;
   padding: 25px;
   text-align: center;
 }
