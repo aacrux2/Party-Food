@@ -1,0 +1,165 @@
+/* =====================
+   ESTILOS GENERALES
+===================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background-color: #860f04;
+  padding: 0px; /* separación general de los bordes */
+}
+
+/* =====================
+   HEADER
+===================== */
+header {
+  background-color: #333;
+  color: rgb(255, 255, 255);
+  padding: 25px; /* más espacio arriba y abajo */
+  text-align: center;
+}
+
+/* =====================
+   MAIN
+===================== */
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px 20px; /* más separación superior e inferior */
+}
+
+main button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  background-color: #333;
+  color: white;
+  transition: background 0.3s;
+}
+
+main button:hover {
+  background-color: #555;
+}
+
+main p {
+  margin-top: 15px;
+  font-size: 18px;
+  text-align: center;
+  color: white;
+}
+
+/* =====================
+   TARJETAS
+===================== */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px; /* más separación entre tarjetas */
+  padding: 120px; /* más separación de los bordes */
+}
+
+.card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: transform 0.2s;
+  aspect-ratio: 1 / 1; /* tarjeta cuadrada */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 8px; /* reduce tamaño interno para tarjeta más compacta */
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* imagen llena el cuadro */
+  border-radius: 12px 12px 0 0;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover img {
+  transform: scale(1.05);
+}
+
+.card h3 {
+  margin: 0;
+  text-align: center;
+  font-size: 16px;
+  color: #333;
+}
+
+a {
+  text-decoration: none; /* quita subrayado */
+  color: inherit; /* mantiene el color del h3 */
+  display: block;
+}
+
+
+/* =====================
+   FOOTER
+===================== */
+footer {
+  background-color: #222;
+  color: #ccc;
+  padding: 25px;
+  text-align: center;
+}
+
+/* =====================
+   MEDIA QUERIES
+===================== */
+
+/* Tablet */
+@media (max-width: 1025px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    padding: 40px;
+  }
+}
+
+/* Móvil */
+@media (max-width: 450px) {
+  main {
+    margin: 30px 10px; /* más separación del header */
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+    gap: 25px; /* mayor separación entre tarjetas */
+    padding: 20px; /* separación de los bordes */
+  }
+
+  .card img {
+    height: auto; /* deja que el aspect-ratio controle el tamaño */
+  }
+
+  main button {
+    width: 80%;
+    font-size: 16px;
+    padding: 8px 16px;
+  }
+
+  .card h3 {
+    font-size: 16px;
+  }
+}
