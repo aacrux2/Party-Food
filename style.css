@@ -1,5 +1,5 @@
 /* =====================
-   ESTILOS GENERALES
+   ESTILOS GENERALES INDEX.HTML
 ===================== */
 * {
   box-sizing: border-box;
@@ -60,13 +60,13 @@ main p {
 }
 
 /* =====================
-   TARJETAS
+   TARJETAS INDEX.HTML
 ===================== */
 .cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 40px; /* más separación entre tarjetas */
-  padding: 120px; /* más separación de los bordes */
+  gap: 40px;
+  padding: 120px;
 }
 
 .card {
@@ -76,11 +76,11 @@ main p {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   cursor: pointer;
   transition: transform 0.2s;
-  aspect-ratio: 1 / 1; /* tarjeta cuadrada */
+  aspect-ratio: 1 / 1;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: 8px; /* reduce tamaño interno para tarjeta más compacta */
+  padding: 8px;
 }
 
 .card:hover {
@@ -90,7 +90,7 @@ main p {
 .card img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* imagen llena el cuadro */
+  object-fit: cover;
   border-radius: 12px 12px 0 0;
   margin-bottom: 10px;
   transition: transform 0.3s ease;
@@ -108,11 +108,10 @@ main p {
 }
 
 a {
-  text-decoration: none; /* quita subrayado */
-  color: inherit; /* mantiene el color del h3 */
+  text-decoration: none;
+  color: inherit;
   display: block;
 }
-
 
 /* =====================
    FOOTER
@@ -125,10 +124,8 @@ footer {
 }
 
 /* =====================
-   MEDIA QUERIES
+   MEDIA QUERIES INDEX.HTML
 ===================== */
-
-/* Tablet */
 @media (max-width: 1025px) {
   .cards {
     grid-template-columns: repeat(2, 1fr);
@@ -137,20 +134,19 @@ footer {
   }
 }
 
-/* Móvil */
 @media (max-width: 450px) {
   main {
-    margin: 30px 10px; /* más separación del header */
+    margin: 30px 10px;
   }
 
   .cards {
     grid-template-columns: 1fr;
-    gap: 25px; /* mayor separación entre tarjetas */
-    padding: 20px; /* separación de los bordes */
+    gap: 25px;
+    padding: 20px;
   }
 
   .card img {
-    height: auto; /* deja que el aspect-ratio controle el tamaño */
+    height: auto;
   }
 
   main button {
@@ -160,6 +156,93 @@ footer {
   }
 
   .card h3 {
+    font-size: 16px;
+  }
+}
+
+/* =====================
+   ESTILOS PÁGINA MENU.HTML
+===================== */
+body.pagina-menu {
+  background-color: #e7200e;
+  color: white;
+  padding: 20px;
+}
+
+body.pagina-menu header {
+  background-color: #333;
+  color: white;
+  padding: 40px 25px;
+  text-align: center;
+}
+
+body.pagina-menu main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 40px 20px;
+  text-align: center;
+}
+
+body.pagina-menu main h1 {
+  margin-bottom: 20px;
+  font-size: 32px;
+}
+
+body.pagina-menu main p {
+  font-size: 18px;
+  max-width: 600px;
+  margin-bottom: 20px;
+}
+
+body.pagina-menu #imagen-categoria {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+body.pagina-menu a.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+body.pagina-menu a.button:hover {
+  background-color: #555;
+}
+
+body.pagina-menu footer {
+  background-color: #222;
+  color: #ccc;
+  padding: 25px;
+  text-align: center;
+}
+
+/* MEDIA QUERIES PÁGINA MENU */
+@media (max-width: 450px){
+  body.pagina-menu header {
+    padding: 25px;
+  }
+
+  body.pagina-menu main h1 {
+    font-size: 26px;
+  }
+
+  body.pagina-menu #imagen-categoria {
+    width: 90%;
+    height: auto;
+  }
+
+  body.pagina-menu main p {
     font-size: 16px;
   }
 }

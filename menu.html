@@ -1,111 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <title>Menú</title>
-  <style>
-    /* =====================
-       ESTILOS GENERALES
-    ===================== */
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-      font-family: Arial, sans-serif;
-      background-color: #e7200e;
-      color: white;
-      padding: 20px;
-    }
-
-    header {
-      background-color: #333;
-      color: white;
-      padding: 40px 25px; /* 40px en PC, 25px en móvil */
-      text-align: center;
-    }
-
-    main {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      margin: 40px 20px;
-      text-align: center;
-    }
-
-    main h1 {
-      margin-bottom: 20px;
-      font-size: 32px;
-    }
-
-    main p {
-      font-size: 18px;
-      max-width: 600px;
-      margin-bottom: 20px;
-    }
-
-    #imagen-categoria {
-      width: 300px;
-      height: 300px;
-      object-fit: cover;
-      border-radius: 15px;
-      margin-bottom: 20px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    }
-
-    footer {
-      background-color: #222;
-      color: #ccc;
-      padding: 25px;
-      text-align: center;
-    }
-
-    a.button {
-      display: inline-block;
-      padding: 10px 20px;
-      background-color: #333;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      transition: background 0.3s;
-    }
-
-    a.button:hover {
-      background-color: #555;
-    }
-
-    /* MEDIA QUERIES */
-    @media (max-width: 450px){
-      header {
-        padding: 25px;
-      }
-
-      main h1 {
-        font-size: 26px;
-      }
-
-      #imagen-categoria {
-        width: 90%;
-        height: auto;
-      }
-
-      main p {
-        font-size: 16px;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
+
+<body class="pagina-menu">
 
   <header>
-    <h1>Party Food - Menú</h1>
+    <h1>Party Food </h1>
   </header>
 
   <main>
@@ -129,7 +34,7 @@
     const imagen = document.getElementById('imagen-categoria');
 
     // Contenido dinámico según categoría
-    switch(categoria){
+    switch (categoria) {
       case 'sushi':
         titulo.textContent = 'Sushi';
         descripcion.textContent = 'Deliciosos rollos de sushi frescos, preparados con los mejores ingredientes.';
@@ -175,4 +80,5 @@
   </script>
 
 </body>
+
 </html>
