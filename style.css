@@ -13,7 +13,8 @@ body {
   min-height: 100vh;
   font-family: Arial, sans-serif;
   background-color: #860f04;
-  padding: 0px; /* separación general de los bordes */
+  padding: 0px;
+  /* separación general de los bordes */
 }
 
 /* =====================
@@ -22,7 +23,8 @@ body {
 header {
   background-color: #333;
   color: rgb(255, 255, 255);
-  padding: 25px; /* más espacio arriba y abajo */
+  padding: 25px;
+  /* más espacio arriba y abajo */
   text-align: center;
 }
 
@@ -34,7 +36,8 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 50px 20px; /* más separación superior e inferior */
+  margin: 50px 20px;
+  /* más separación superior e inferior */
 }
 
 main button {
@@ -202,10 +205,12 @@ body.pagina-menu #imagen-categoria {
   height: 150px;
   object-fit: cover;
   border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   position: relative;
-  top: -230px;   /* sube la imagen */
-  left: -865px;    /* alinea a la izquierda */
+  top: -230px;
+  /* sube la imagen */
+  left: -865px;
+  /* alinea a la izquierda */
 }
 
 
@@ -217,6 +222,7 @@ body.pagina-menu a.button {
   text-decoration: none;
   border-radius: 8px;
   transition: background 0.3s;
+  
 }
 
 body.pagina-menu a.button:hover {
@@ -231,21 +237,42 @@ body.pagina-menu footer {
 }
 
 /* MEDIA QUERIES PÁGINA MENU */
-@media (max-width: 450px){
+@media (max-width: 450px) {
   body.pagina-menu header {
     padding: 25px;
   }
 
-  body.pagina-menu main h1 {
-    font-size: 26px;
+  body.pagina-menu main {
+    position: relative;
+    /* referencia para la imagen */
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 40px 20px;
+    text-align: center;
   }
 
   body.pagina-menu #imagen-categoria {
-    width: 90%;
-    height: auto;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+
+    position: absolute;
+    top: -30px;
+    /* separación superior */
+    left: -15px;
+    /* separación izquierda */
   }
 
+
   body.pagina-menu main p {
-    font-size: 16px;
+    position: absolute;
+    top: 80px;
+    left: auto;
+    font-size: 10px;
   }
 }
